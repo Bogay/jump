@@ -626,9 +626,10 @@ MonoBehaviour:
   friutPrefab:
   - {fileID: 6206020840343493163, guid: 81f46ee4fef6244eb98871df52b3fdc6, type: 3}
   - {fileID: 1644733699072779132, guid: bdc4ae235a3b04014bdd2768bce87fe3, type: 3}
-  secondSpawn: 0.5
-  minX: -3
-  maxX: 4
+  - {fileID: 6076438034170157744, guid: f28d647af04104936bc7ecbcba958353, type: 3}
+  secondSpawn: 2.5
+  minX: -8.7
+  maxX: 8.6
 --- !u!212 &830203054
 SpriteRenderer:
   m_ObjectHideFlags: 0
