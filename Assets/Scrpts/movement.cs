@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] SpriteRenderer sp;
+    Rigidbody2D rb;
+    SpriteRenderer sp;
     [SerializeField] float speed;
     [SerializeField] float power;
     [SerializeField] bool OnGround;
