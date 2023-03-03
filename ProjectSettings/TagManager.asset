@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - gasoline-can
+  - obstacle
   layers:
   - Default
   - TransparentFX
