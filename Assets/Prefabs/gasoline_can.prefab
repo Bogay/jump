@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6870234642949037682}
   - component: {fileID: -4006056020290386020}
   - component: {fileID: 3017822615898852366}
+  - component: {fileID: 5060753721057058068}
   m_Layer: 0
   m_Name: gasoline_can
   m_TagString: obstacle
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: {x: 0, y: 0, z: 0.3}
+--- !u!114 &5060753721057058068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076438034170157744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc1631cb43ab494d99aaa24b9356d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}

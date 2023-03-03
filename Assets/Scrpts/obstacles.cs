@@ -5,7 +5,7 @@ using UnityEngine;
 public class obstacles : MonoBehaviour
 {
 
-    [SerializeField] GameObject[] friutPrefab;
+    [SerializeField] GameObject[] obstaclesPrefab;
     [SerializeField] float secondSpawn = 0.5f;
     [SerializeField] float minX;
     [SerializeField] float maxX;
@@ -21,7 +21,7 @@ public class obstacles : MonoBehaviour
         {
             var wanted = Random.Range(minX, maxX);
             var position = new Vector3(wanted, transform.position.y);
-            GameObject gameObject = Instantiate(friutPrefab[Random.Range(0, friutPrefab.Length)],
+            GameObject gameObject = Instantiate(obstaclesPrefab[Random.Range(0, obstaclesPrefab.Length)],
             position, Quaternion.identity);
             yield return new WaitForSeconds(secondSpawn);
             Destroy(gameObject, 5f);

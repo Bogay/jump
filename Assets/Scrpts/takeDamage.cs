@@ -16,13 +16,13 @@ public class takeDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "obstacle" && canTakeDamage)
         {
-            Debug.Log(1);
             StartCoroutine(this.takingDamage());
+            other.gameObject.tag = "hit";
         }
-        if (other.gameObject.tag == "")
+        /*if (other.gameObject.tag == "")
         {
             HP++;
-        }
+        }*/
     }
 
     private IEnumerator takingDamage()
