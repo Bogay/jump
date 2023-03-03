@@ -40,14 +40,14 @@ public class takeDamage : MonoBehaviour
         }
     }
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "" && canTakeDamage){
+        if(other.gameObject.tag == "gasoline-can" && canTakeDamage){
             StartCoroutine("takingDamage");
         }
         if(other.gameObject.tag == ""){
             HP++;
         }
     }
-    private IEnumerable takingDamage(){
+    private IEnumerator takingDamage(){
         canTakeDamage = false;
         HP--;
         yield return new WaitForSeconds(takeDamageCoolDown);

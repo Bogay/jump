@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 675630257188381009}
   - component: {fileID: 675630257188381102}
-  - component: {fileID: 675630257188381103}
   - component: {fileID: 675630257188381100}
   - component: {fileID: 675630257188381101}
   - component: {fileID: 675630257188381008}
+  - component: {fileID: 675630257188381103}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -88,26 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &675630257188381103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675630257188381098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba959908e7738e947a11f7482ed8c9b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  power: 10
-  OnGround: 0
-  isDashing: 0
-  canDash: 1
-  dashPower: 5
-  dashCoolDown: 1
-  dashTime: 0.1
 --- !u!50 &675630257188381100
 Rigidbody2D:
   serializedVersion: 4
@@ -169,8 +149,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 4
   MaxHP: 4
-  canTakeDamage: 0
-  takeDamageCoolDown: 0
+  canTakeDamage: 1
+  takeDamageCoolDown: 1
   heart: []
   fullheart: {fileID: 0}
   emptyheart: {fileID: 0}
+--- !u!114 &675630257188381103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675630257188381098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba959908e7738e947a11f7482ed8c9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  power: 10
+  OnGround: 0
+  isDashing: 0
+  canDash: 1
+  dashPower: 5
+  dashCoolDown: 1
+  dashTime: 0.1
