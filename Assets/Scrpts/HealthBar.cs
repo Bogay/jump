@@ -20,6 +20,9 @@ public class HealthBar : MonoBehaviour
 
     private void showSprites(int hp, int maxHp)
     {
+        if (hp < 0)
+            return;
+
         int childCount = transform.childCount;
         for (int i = childCount + 1; i <= maxHp; i++)
         {
