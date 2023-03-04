@@ -19,6 +19,9 @@ public class takeDamage : MonoBehaviour
             StartCoroutine(this.takingDamage());
             other.gameObject.tag = "hit";
         }
+        if(other.gameObject.tag == "robot"&&canTakeDamage){
+            HP = 0;
+        }
         /*if (other.gameObject.tag == "")
         {
             HP++;
