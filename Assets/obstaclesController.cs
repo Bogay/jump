@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class obstaclesController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject target;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             target.tag = "hit";
+        }
+        if (other.gameObject.CompareTag("ground"))
+        {
+            gameObject.tag = "hit";
         }
     }
 }
