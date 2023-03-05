@@ -48,7 +48,7 @@ public class movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "ground")
+        if (other.gameObject.CompareTag("ground") || other.gameObject.CompareTag("obstacle") || other.gameObject.CompareTag("hit"))
         {
             OnGround = true;
         }
