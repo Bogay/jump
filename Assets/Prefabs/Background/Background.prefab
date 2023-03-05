@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floor: {fileID: 8291905301209156863, guid: 898ffcad3623a4bf0921be0351423f80, type: 3}
-  verticalInterval: 3
-  offsetY: 4
+  verticalInterval: 3.5
+  offsetY: 5
   leftX: -8
   midX: 0
   rightX: 8
