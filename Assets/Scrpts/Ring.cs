@@ -11,14 +11,80 @@ public class Ring : MonoBehaviour
     [SerializeField]
     private float rotateSpeed2;
 
-    void Start()
+    private bool[] ringsEnable = new bool[3];
+
+    // Setup a random config
+    public void Init()
     {
-        StartCoroutine(this.rotateLoop(transform.Find("ring0"), this.rotateSpeed0));
-        StartCoroutine(this.rotateLoop(transform.Find("ring1"), this.rotateSpeed1));
-        StartCoroutine(this.rotateLoop(transform.Find("ring2"), this.rotateSpeed2));
+        for (int i = 0; i < this.ringsEnable.Length; i++)
+        {
+            this.ringsEnable[i] = Random.Range(0f, 1f) > 0.5f;
+        }
+        this.rotateSpeed0 = Random.Range(3, 18) * (Random.Range(0f, 1f) > 0.5 ? 1 : -1);
+        this.rotateSpeed1 = Random.Range(3, 18) * (Random.Range(0f, 1f) > 0.5 ? 1 : -1);
+        this.rotateSpeed2 = Random.Range(3, 18) * (Random.Range(0f, 1f) > 0.5 ? 1 : -1);
     }
 
-    private IEnumerator rotateLoop(Transform target, float speed)
+    void Start()
+    {
+        float[] rotateSpeeds = {
+            this.rotateSpeed0,
+            this.rotateSpeed1,
+            this.rotateSpeed2,
+        };
+        for (int i = 0; i < 3; i++)
+        {
+            Transform ring = transform.Find($"ring{i}");
+            if (this.ringsEnable[i])
+            {
+                this.StartAnimate(ring, rotateSpeeds[i]);
+            }
+            else
+            {
+                ring.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private void StartAnimate(Transform target, float speed)
+    {
+        SpriteRenderer renderer = target.GetComponent<SpriteRenderer>();
+        StartCoroutine(this.flash(renderer));
+        StartCoroutine(this.rotate(target, speed));
+    }
+
+    private IEnumerator flash(SpriteRenderer renderer)
+    {
+        float alphaMax = renderer.color.a;
+        float alphaMin = alphaMax / 2;
+        float alpha = Random.Range(alphaMin, alphaMax);
+        // loop completes in 6 sec.
+        float step = (alphaMax - alphaMin) / 3;
+
+        while (true)
+        {
+            while (alpha < alphaMax)
+            {
+                alpha += step * Time.deltaTime;
+                renderer.color = this.changeAlpha(renderer.color, alpha);
+                yield return null;
+            }
+            while (alpha > alphaMin)
+            {
+                alpha -= step * Time.deltaTime;
+                renderer.color = this.changeAlpha(renderer.color, alpha);
+                yield return null;
+            }
+        }
+    }
+
+    private Color changeAlpha(Color color, float alpha)
+    {
+        color.a = alpha;
+        return color;
+    }
+
+    private IEnumerator rotate(Transform target, float speed)
     {
         while (true)
         {

@@ -123,81 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &13232705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4512331077248888875, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
-  m_PrefabInstance: {fileID: 4512331077236087181}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &13232706 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4512331077248888874, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
-  m_PrefabInstance: {fileID: 4512331077236087181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &13232707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13232705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13386110727b474a8cbb26a67c26506, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1243923495}
---- !u!1 &49754026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 49754027}
-  - component: {fileID: 49754028}
-  m_Layer: 0
-  m_Name: FloorSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &49754027
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49754026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 13232706}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &49754028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49754026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0cc02542ff591547ac8094699efec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floor: {fileID: 8291905301209156863, guid: 898ffcad3623a4bf0921be0351423f80, type: 3}
-  verticalInterval: 3
-  offsetY: 4
-  leftX: -8
-  midX: 0
-  rightX: 8
-  jitterRange: 0.8
-  lastSpawnSlots: 4
 --- !u!1001 &77353987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -549,67 +474,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6291739186872161605, guid: 7b4576cbaa0ff8c41b745f057e160402, type: 3}
   m_PrefabInstance: {fileID: 77353987}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &613933654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 613933655}
-  - component: {fileID: 613933656}
-  m_Layer: 0
-  m_Name: CameraConfiner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &613933655
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613933654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 13232706}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &613933656
+--- !u!60 &613933656 stripped
 PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 613933656, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
+  m_PrefabInstance: {fileID: 4512331077236087181}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613933654}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -6, y: -100}
-      - {x: 6, y: -100}
-      - {x: 6, y: 100}
-      - {x: -6, y: 100}
 --- !u!1 &701394488
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 675630257188381103, guid: 2fbe5396de90fc84da8a45a7851a13f0, type: 3}
       propertyPath: power
-      value: 15
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fbe5396de90fc84da8a45a7851a13f0, type: 3}
@@ -949,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720781383599809422, guid: 898ffcad3623a4bf0921be0351423f80, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3637338
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3720781383599809422, guid: 898ffcad3623a4bf0921be0351423f80, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1170,14 +1039,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4512331077083817784, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
-      propertyPath: boundMax.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512331077083817784, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
-      propertyPath: boundMin.x
-      value: -10
-      objectReference: {fileID: 0}
+    - target: {fileID: 13232707, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1243923495}
     - target: {fileID: 4512331077248888874, guid: 7dea454ff4f7fe24fa15d98c13aebae2, type: 3}
       propertyPath: m_RootOrder
       value: 7
