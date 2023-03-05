@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1744916262744860727}
   - component: {fileID: -7024105498669228677}
   - component: {fileID: -8631782724691910939}
+  - component: {fileID: 7818397531693627043}
   m_Layer: 0
   m_Name: wooden_box
   m_TagString: obstacle
@@ -133,3 +134,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7818397531693627043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206020840343493163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc1631cb43ab494d99aaa24b9356d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}

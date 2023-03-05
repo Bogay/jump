@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/bogay.test/bogay.unity
+    guid: 79bad49fd5f533c4786563270932d61d
+  - enabled: 1
+    path: Assets/Scenes/GG.unity
+    guid: 862ebe856fd49294093c52049e7c002f
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 79d602ee5148cd848843584679c47817
   m_configObjects: {}
