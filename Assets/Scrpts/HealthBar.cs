@@ -24,7 +24,7 @@ public class HealthBar : MonoBehaviour
             return;
 
         int childCount = transform.childCount;
-        for (int i = childCount + 1; i <= maxHp; i++)
+        for (int i = childCount; i < maxHp; i++)
         {
             GameObject go = new GameObject($"HP {i}");
             go.transform.SetParent(transform);
@@ -44,7 +44,9 @@ public class HealthBar : MonoBehaviour
 
         for (int i = hp; i < maxHp; i++)
         {
-            transform.GetChild(i).GetComponent<Image>().overrideSprite = this.emptyHeart;
+            transform.GetChild(i).GetComponent<Image>().overrideSprite = null;
         }
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
     }
 }

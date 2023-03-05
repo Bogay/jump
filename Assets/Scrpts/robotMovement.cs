@@ -14,11 +14,7 @@ public class robotMovement : MonoBehaviour
     void Start()
     {
         transform.position = this.cacluatePosition();
-    }
-
-    void Update()
-    {
-        transform.Translate(robotspeed * Time.deltaTime);
+        GetComponent<Rigidbody2D>().velocity = this.robotspeed;
     }
 
     private Vector3 cacluatePosition()
